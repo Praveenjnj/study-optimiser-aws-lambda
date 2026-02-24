@@ -38,7 +38,7 @@ module "iam_policy" {
       "kms:GenerateDataKey",
       "kms:GenerateDataKeyPair"
     ]
-    Resource = module.kms.kms_key_arn
+    Resource = [module.kms.kms_key_arn]
   },
   {
     Sid    = "Statement2"
@@ -46,7 +46,7 @@ module "iam_policy" {
     Action = [
       "logs:*"
     ]
-    Resource = module.cloudwatch_log_group.log_group_arn
+    Resource = [module.cloudwatch_log_group.log_group_arn]
   }
 ]
     
@@ -64,7 +64,7 @@ module "iam_policy_sts" {
       Sid    = "Statement1"
       Effect = "Allow"
       Action = ["sts:AssumeRole"]
-      Resource = var.crossaccount_role_arn
+      Resource = [var.crossaccount_role_arn]
     }
   ]
 
@@ -108,4 +108,5 @@ module "lambda_trigger" {
     event_bridge_rule_name = var.event_bridge_rule_name
     lambda_function_name = module.lambda_function.lambda_name
 }
+
 
