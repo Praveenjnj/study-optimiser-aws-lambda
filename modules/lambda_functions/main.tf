@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "this" {
+resource "aws_lambda_function" "zip_csv_lambda" {
   /* Creates a Lambda function.
   https://registry.terraform.io/providers/hashicorp/aws/5.97.0/docs/resources/lambda_function */
   function_name                  = var.function_name
