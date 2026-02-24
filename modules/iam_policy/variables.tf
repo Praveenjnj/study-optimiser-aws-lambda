@@ -7,10 +7,11 @@ variable "policy_description" {
 }
 
 variable "policy_statements" {
-  type = list(objects({
+  type = list(object({
+    Sid = optional(string)
     Effect = string
-    Action = list(string)
-    Resource = list(string)
+    Action = any
+    Resource = any
     Condition = optional(map(any))
   }))
 }
