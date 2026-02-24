@@ -88,7 +88,7 @@ variable "package_type" {
 }
 variable "lambda_architecture" {
     type = string
-    default = x86_64
+    default = "x86_64"
 }
 variable "event_bridge_rule_name" {
     type = string

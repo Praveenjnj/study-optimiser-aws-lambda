@@ -77,7 +77,7 @@ variable "tags" {
 
 variable "lambda_architecture" {
     type = string
-    default = x86_64
+    default = "x86_64"
 }
 
 variable "reserved_concurrent_executions" {
