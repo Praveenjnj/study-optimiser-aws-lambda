@@ -46,7 +46,8 @@ module "iam_policy" {
     Action = [
       "logs:*"
     ]
-    Resource = [module.cloudwatch_log_group.log_group_arn]
+     Resource = [
+      "${module.cloudwatch_log_group.log_group_arn}:*"
   }
 ]
     
@@ -108,5 +109,6 @@ module "lambda_trigger" {
     event_bridge_rule_name = var.event_bridge_rule_name
     lambda_function_name = module.lambda_function.lambda_name
 }
+
 
 
