@@ -3,7 +3,7 @@ module "kms" {
 
 }
 
-module "cloudwatch_log_group" {
+/* module "cloudwatch_log_group" {
     source = "../modules/cloudwatch_log_group"
     log_group_name = var.log_group_name
     log_retention_in_days = var.log_retention_in_days
@@ -88,7 +88,7 @@ module "role_policy_attachment_lambda_execution" {
 
 }
 
-
+*/
 module "lambda_function" {
     source = "../modules/lambda_functions"
     function_name = var.function_name
@@ -110,6 +110,7 @@ module "lambda_trigger" {
     event_bridge_rule_name = var.event_bridge_rule_name
     lambda_function_name = module.lambda_function.lambda_name
 }
+
 
 
 
