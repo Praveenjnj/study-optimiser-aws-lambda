@@ -1,5 +1,5 @@
 output "lambda_role_arn" {
-  value = module.iam_role.lambda_role_arn
+  value = module.archive_lambda.lambda_role_arn
 }
 
 output "lambda_function_name" {

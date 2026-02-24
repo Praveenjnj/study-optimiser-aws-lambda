@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "event_rule" {
   name = var.event_bridge_rule_name
   description = "Event bridge rule"
-  schedule_expression =var.schedule_expresion
+  schedule_expression = var.schedule_expresion
 }
 
 resource "aws_cloudwatch_event_target" "event_target" {
