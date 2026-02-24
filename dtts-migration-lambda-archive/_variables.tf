@@ -112,3 +112,9 @@ variable "environment_variables" {
     type = map(string)
     default = {}
 }
+
+variable "filename" {
+  description = "Path to the Lambda zip file"
+  type        = string
+  default     = null
+}

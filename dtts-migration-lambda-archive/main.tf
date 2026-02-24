@@ -96,7 +96,7 @@ module "lambda_function" {
     kms_key_arn = module.kms.kms_key_arn
     cloudwatch_log_group_name = module.cloudwatch_log_group.log_group_name
     environment_variables = var.environment_variables
-    filename = "${path.root}/src/lambda/lambda.zip"
+    filename = "${path.root}/lambda.zip"
     handler  = "lambda.handler"
     runtime  = "python3.11"
  
