@@ -4,7 +4,7 @@ module "kms" {
 }
 
 module "cloudwatch_log_group" {
-    source = "../modules/cloudwatch-log-group"
+    source = "../modules/cloudwatch_log_group"
     log_group_name = var.log_group_name
     log_retention_in_days = var.log_retention_in_days
     kms_key_id = var.kms_key_id
