@@ -3,7 +3,7 @@ terraform {
     aws = {
       /* https://registry.terraform.io/providers/hashicorp/aws/latest/docs */
       source  = "hashicorp/aws"
-      version = "~> 6.0"
+      version = "~> 5.0"
     }
   }
 
